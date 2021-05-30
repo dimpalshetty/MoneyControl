@@ -8,27 +8,27 @@ import {
 } from 'react-native';
 import bg from './assets/bg.jpg';
 
-export default function App() {
+import CurvedButton from './components/curbutton';
+import ClrlesBtn from './components/colorlessbutton';
+
+export default function  App() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <ImageBackground source={bg} style={styles.image}>
-          <Text style={styles.text}>MoXp</Text>
-        </ImageBackground>
-      </View>
-      <View style={styles.footer}>
-        <Text style={styles.title}>Let Us Get Started!</Text>
-        <Text style={styles.texts}>
-          Many desktop publishing packages and web page editors now use Lorem
-          Ipsum as their default model
-        </Text>
-        <TouchableOpacity style={styles.but} onPress={'click'}>
-          <Text style={styles.butt}> Create An Account </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={'click'}>
-          <Text style={styles.button}> Login To Existing Account </Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.header}>
+          <ImageBackground source={bg} style={styles.image}>
+            <Text style={styles.text}>MoXp</Text>
+          </ImageBackground>
+        </View>
+          <View style={styles.footer}>
+           <Text style={styles.title}>Let Us Get Started!</Text>
+           <Text style={styles.texts}> 
+              Many desktop publishing packages and web page editors now use Lorem
+              Ipsum as their model
+            </Text> 
+           <CurvedButton text="Create An Account" /> 
+           <ClrlesBtn text="Login To Existing Account"/>
+          
+          </View>
     </View>
   );
 }
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     color: 'white',
     fontWeight: "700",
-    fontFamily: 'Montserrat',
+    fontFamily: "Montserrat",
     marginTop: -10,
     paddingLeft: 15,
   },
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#97D5FE',
     fontSize: 76,
-    fontWeight: '700',
+    fontWeight: "700",
     height: 300,
     lineHeight: 90,
     fontFamily: 'Futura',
