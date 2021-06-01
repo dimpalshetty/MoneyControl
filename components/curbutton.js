@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default function CurvedButton ({text}) {
+export default function CurvedButton ({onPress, text}) {
 return(
   
-  <TouchableOpacity styles={styles.button} >
+  <TouchableOpacity style={styles.button} onPress={onclick} >
      <View style={styles.but}> 
           <Text style={styles.butt}> {text} </Text> 
         </View>
@@ -22,11 +22,12 @@ return(
 
 const styles = StyleSheet.create({
   but: {
-    elevation: 3,
+    elevation: 4,
     backgroundColor: 'white',
-    borderRadius: 11,
+    borderRadius: 10,
     paddingVertical: 15,
-    paddingHorizontal: 20,
+    paddingHorizontal: 70,
+    marginTop: -15,
 
     alignItems: 'center',
   },
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
   },
 
   butt: {
-    fontFamily: 'Montserrat',
+    fontFamily: "Montserrat",
     color: '#3573CF',
     fontWeight: "500",
     fontSize: 18,
