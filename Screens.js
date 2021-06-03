@@ -4,118 +4,22 @@ import {
     ImageBackground,
     StyleSheet,
     View,
+    Image,
     TouchableOpacity,
     Button,
   } from 'react-native';
 import bg from './assets/bg.jpg';
 import CurvedButton from './components/curbutton';
+import  TextInputBox from './components/textInputBox';
 import ClrlesBtn from './components/colorlessbutton';
-import {LinearGradient} from 'react-native-linear-gradient';
+import neww from './assets/neww.jpg';
+import google from './assets/google.png';
+import arrowbtn from './assets/arrowbtn.png';
+import facebook from './assets/facebook.png';
+import styles from './styles';
 
 
-const styles = StyleSheet.create({
 
-    image: {
-      flex: 1,
-      justifyContent: 'center',
-      height: null,
-      width: null,
-    },  
-
-    but: {
-      elevation: 2,
-      backgroundColor: 'white',
-      borderRadius: 10,
-      paddingVertical: 5,
-      paddingHorizontal: 10,
-  
-      alignItems: 'center',
-    },
-  
-    button: {
-      alignItems: 'center',
-      fontSize: 18,
-      color: 'white',
-      textAlign: 'center',
-      fontWeight: "500",
-      top: 15,
-    },
-  
-    butt: {
-      fontFamily: "Montserrat",
-      color: '#3573CF',
-      fontWeight: "500",
-      fontSize: 18,
-    },
-  
-    title: {
-      fontSize: 32,
-      color: 'white',
-      fontWeight: "700",
-      fontFamily: "Montserrat",
-      marginTop: -10,
-      paddingLeft: 15,
-    },
-  
-    texts: {
-      color: 'white',
-      fontSize: 16,
-      fontWeight: "400",
-      paddingTop: 15,
-      paddingLeft: 14,
-      paddingBottom: 60,
-      marginBottom: -15,
-    },
-  
-    text: {
-      color: '#97D5FE',
-      fontSize: 76,
-      fontWeight: "700",
-  
-      height: 300,
-      lineHeight: 90,
-      fontFamily: 'Futura',
-      paddingLeft: 60,
-      paddingTop: 90,
-      paddingRight: 0,
-    },
-    containers: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center"
-    },
-  
-     header: {
-      flex: 2,
-      justifyContent: 'center',
-
-    },
-    footer: {
-      
-      backgroundColor: '#3573CF',
-      borderTopLeftRadius: 40,
-      borderTopRightRadius: 40,
-      paddingVertical: 50,
-      paddingHorizontal: 30,
-    },
-    container: {
-      flex: 1,
-    },
-    linearGradient: {
-      width: '100%',
-      height: '100%',
-      opacity: 0.95,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    image2:{
-      width:'100%',
-      height: '100%',
-
-    },
-
-   
-  });
 
   const ScreenContainer = ({ children }) => (
     <View style={styles.containers}>{children}</View>
@@ -157,11 +61,75 @@ const styles = StyleSheet.create({
 
     return (
       <ScreenContainer>
+ 
+ 
+   
+    <ImageBackground source={neww} style={styles.images}>
+    
+     <View style={styles.box}><Text style={styles.Signtext}>Welcome {'\n'} Back! </Text>
+      </View> 
+      <View style={styles.inputBoxa}>
+       <TextInputBox text='Email Or Username'/>
+     </View>
+      <View style={styles.inputBoxb}>
+       <TextInputBox text='Password'/>
+      </View> 
+      <View style={styles.signin}>
+        <Text style={styles.signintext}>Sign in</Text>
+        </View>
+    <View>
+    <TouchableOpacity style={styles.arrow}>
+         <Image source={arrowbtn}></Image>
+         </TouchableOpacity>
+
+      </View>
+
       <View>
-       <Text>Helline</Text> 
-       
-    </View>
+        <TouchableOpacity>
+          <Text style={styles.forgotpassword}>Forgot Password?</Text>
+        </TouchableOpacity>
+      </View>
+      
+      
+      <TouchableOpacity>
+      
+      <View style={styles.google}>
+      
+ 
+         <Image source={google}></Image>
+        
+
+      </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+      
+      <View style={styles.facebook}>
+      
+ 
+         <Image source={facebook}></Image>
+        
+
+      </View>
+      </TouchableOpacity>
+        
+      <View style={styles.donthaveacc}>
+        <Text style={styles.grey}> Don't Have An Account Yet?
+        
+        <TouchableOpacity>
+          <Text  style={styles.donthave}>Create A Account</Text>
+        </TouchableOpacity>
+        
+        </Text>
+
+        </View>
+
+    
+      
+    </ImageBackground>
      
+
+    
      
       </ScreenContainer>
 
